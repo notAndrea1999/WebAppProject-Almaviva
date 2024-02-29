@@ -1,0 +1,24 @@
+﻿@model PersonaModel;
+
+<div class="d-flex justify-content-center">
+    <form asp-action="_formPersona" method="post">
+
+        <label asp-for="first_name" class="form-label">First Name</label>
+        <input asp-for="first_name" class="form-control" />
+
+
+        <label asp-for="last_name" class="form-label">Last Name</label>
+        <input asp-for="last_name" class="form-control" />
+
+        <label asp-for="telephone_number" class="form-label">Number</label>
+        <input asp-for="telephone_number" class="form-control" />
+
+        <label asp-for="id_comune" class="form-label">Comune</label>
+        <input asp-for="id_comune" class="form-control" />
+
+        <button class="btn btn-primary mt-2" type="submit">Create</button>
+    </form>
+</div>
+
+
+

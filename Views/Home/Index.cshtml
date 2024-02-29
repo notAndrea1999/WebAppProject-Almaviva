@@ -1,0 +1,31 @@
+﻿@model List<PersonaModel>;
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            loadPage();
+            loadForm();
+        })
+    </script>
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+
+    
+    <div id="partialPage"></div>
+    <div class="text-center">
+        <p class="display-5">Create a person</p>
+        <div id="partialForm"></div>
+    </div>
+    <div id="partialFormUpdate"></div>
+
+
+</div>
+

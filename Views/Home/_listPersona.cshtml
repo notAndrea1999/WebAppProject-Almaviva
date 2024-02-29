@@ -1,0 +1,34 @@
+﻿@model List<PersonaModel>;
+
+
+<h5 class="mb-4">Numero di persone nella lista: @ViewBag.Count </h5>
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Numero di Telefono</th>
+            <th>Id del comune</th>
+            <th>Action Update</th>
+            <th>Action Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var persona in Model)
+        {
+            <tr class="table-light">
+                <td>@persona.Id</td>
+                <td>@persona.first_name</td>
+                <td>@persona.last_name</td>
+                <td>@persona.telephone_number</td>
+                <td>@persona.id_comune</td>
+                <td><a class="btn btn-primary bg-warning" href="Home/UpdateVediDettaglio?Id=@persona.Id">Update</a></td>
+                <td><a class="btn btn-primary bg-danger" href="Home/Delete?Id=@persona.Id">Delete</a></td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
